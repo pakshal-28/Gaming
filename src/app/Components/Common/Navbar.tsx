@@ -29,7 +29,7 @@ export default function Navbar() {
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 rounded-b-[25px] ${scrolled ? "bg-[#0071F8] shadow-md" : "bg-transparent"
           }`}
       >
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+        <div className="max-w-6xl mx-auto flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="text-white font-bold text-xl">
             BRIOTECHNO

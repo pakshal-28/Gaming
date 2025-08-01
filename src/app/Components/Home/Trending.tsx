@@ -43,7 +43,7 @@ const games = [
 
 export default function Trending() {
   return (
-    <section className="max-w-6xl flex-col mx-auto px-2 pt-50 pb-25">
+    <section className="max-w-6xl flex-col mx-auto pt-50 pb-25">
       {/* Heading */}
       <div className="flex justify-between items-center mb-8">
         <div>

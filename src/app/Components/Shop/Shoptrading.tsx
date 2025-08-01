@@ -38,7 +38,7 @@ export default function Shoptrading() {
     }
 
     return (
-        <section className="max-w-6xl flex-col mx-auto px-2 pt-40 pb-10">
+        <section className="max-w-6xl flex-col mx-auto pt-40 pb-10">
             {/* Filters */}
             <div className="flex justify-center items-center mb-10 py-5">
                 <ul className="flex gap-4 flex-wrap justify-center">

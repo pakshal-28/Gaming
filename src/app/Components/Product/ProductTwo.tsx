@@ -9,7 +9,7 @@ export default function ProductTwo() {
   const [quantity, setQuantity] = useState("1");
 
   return (
-    <section className="relative max-w-6xl mx-auto px-4 py-12 lg:py-20">
+    <section className="relative max-w-6xl mx-auto py-12 lg:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
         {/* Left Image Section */}
         <div className="flex items-center justify-center lg:justify-start">

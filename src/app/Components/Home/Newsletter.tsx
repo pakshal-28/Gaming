@@ -3,7 +3,7 @@ import ctaimg from "../../../../public/ctabg.jpg";
 
 export default function Newsletter() {
   return (
-    <section className="relative max-w-6xl mx-auto px-2 py-16 bg-white">
+    <section className="relative max-w-6xl mx-auto py-16 bg-white">
       <div className="relative grid md:grid-cols-3 gap-6 items-center">
 
         {/* Center Image - placed absolutely */}

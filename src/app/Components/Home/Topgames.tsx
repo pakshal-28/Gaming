@@ -12,7 +12,7 @@ export default function Topgames() {
 
   return (
     <section className="px-2 py-4 bg-[#f7f7f7] rounded-[150px]">
-      <div className="max-w-6xl mx-auto px-2 py-20">
+      <div className="max-w-6xl mx-auto py-20">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
           <div>
