@@ -2,52 +2,46 @@ import Image from "next/image";
 
 export default function ProductCategories() {
     const categories = [
-        { src: "/topgame1.jpg", title: "Action" },
-        { src: "/topgame2.jpg", title: "Action" },
-        { src: "/topgame3.jpg", title: "Action" },
-        { src: "/topgame1.jpg", title: "Action" },
-        { src: "/topgame2.jpg", title: "Action" },
+        { src: "/categories01.jpg", title: "Action" },
+        { src: "/Categories02.jpg", title: "Action" },
+        { src: "/categories03.jpg", title: "Action" },
+        { src: "/categories03.jpg", title: "Action" },
+        { src: "/Categories02.jpg", title: "Action" },
     ];
     return (
-        <section className="max-w-7xl mx-auto px-4 py-14">
+        <section className="max-w-6xl mx-auto px-2 py-14">
             {/* Header */}
-            <div className="flex flex-col md:flex-row justify-between mb-8 gap-4">
+            <div className="flex justify-between items-center mb-8">
                 <div>
-                    <p className="text-[#ee626b] uppercase text-[15px] font-bold">
-                        Action
-                    </p>
-                    <h2 className="text-[28px] md:text-[36px] font-bold text-[#1e1e1e] mt-1">
-                        Related Games
-                    </h2>
+                    <h6 className="text-[#ee626b] uppercase text-[15px] font-bold">Action</h6>
+                    <h2 className="text-[36px] font-bold text-[#1e1e1e] mt-5">Related Games</h2>
                 </div>
 
-                <button className="hidden md:inline-block text-[14px] font-bold bg-[#EE626B] hover:bg-[#1B7FFA] uppercase px-5 py-3 rounded-full cursor-pointer mt-4 md:mt-0">
+                <button className="hidden md:inline-block h-12 text-[14px] font-semibold bg-[#ee626b] hover:bg-[#1B7FFA] uppercase px-7 rounded-[25px] cursor-pointer">
                     VIEW ALL
                 </button>
             </div>
 
             {/* Category Cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center py-7">
                 {categories.map((cat, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-2xl shadow-md w-full max-w-[180px] overflow-hidden hover:shadow-lg transition"
+                        className="bg-white rounded-2xl shadow-md w-full max-w-[230px] overflow-hidden"
                     >
                         {/* Label */}
-                        <div className="bg-blue-600 text-white text-sm font-semibold text-center py-3">
-                            {cat.title}
+                        <div className="bg-[#0071f8] text-white text-sm font-semibold">
+                            <h3 className="text-[17px] font-semibold text-white p-5 text-center">{cat.title}</h3>
+                            <div className="relative w-full h-54 ">
+                                <Image
+                                    src={cat.src}
+                                    alt={cat.title}
+                                    fill
+                                    className="object-cover rounded-t-[24px]"
+                                    sizes="(max-width: 768px) 50vw, 180px"
+                                />
+                            </div>
                         </div>
-                        {/* Image */}
-                        <div className="relative w-full h-28 sm:h-36">
-                            <Image
-                                src={cat.src}
-                                alt={cat.title}
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 50vw, 180px"
-                            />
-                        </div>
-
                     </div>
                 ))}
             </div>

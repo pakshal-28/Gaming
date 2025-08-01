@@ -1,50 +1,65 @@
 import Image from "next/image";
-import ctaimg from "../../../../public/ctabg.jpg"; // replace with actual image
+import ctaimg from "../../../../public/ctabg.jpg";
 
 export default function Newsletter() {
   return (
-    <section className="relative max-w-7xl mx-auto px-6 md:px-4 py-16 bg-white">
-      <div className="grid md:grid-cols-3 gap-6 items-center">
-        {/* Left Card */}
-        <div className="bg-gray-100 rounded-2xl p-6 md:p-8 text-left">
-          <p className="text-red-500 font-semibold text-sm mb-2">OUR SHOP</p>
-          <h2 className="text-[36px] font-bold text-[#1E1E1E] mb-4 leading-tight">
-            Go Pre-Order <span className="hidden md:inline"><br /></span>
-            Buy & Get <span className="hidden md:inline"><br /></span>
-            Best <span className="text-[#006CEC]">Prices</span> <span className="hidden md:inline"><br /></span>
-            For You!
-          </h2>
+    <section className="relative max-w-6xl mx-auto px-2 py-16 bg-white">
+      <div className="relative grid md:grid-cols-3 gap-6 items-center">
 
-          <p className="text-gray-600 text-sm">
-            Lorem ipsum dolor consectetur adipiscing elit sed do eiusmod.
-          </p>
-        </div>
-
-        {/* Center Image */}
-        <div className="relative w-full rounded-2xl overflow-hidden">
+        {/* Center Image - placed absolutely */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-95 w-[550px] rounded-2xl overflow-hidden z-0">
           <Image
             src={ctaimg}
             alt="Newsletter Banner"
-            className="w-full h-full object-cover"
-            width={500}
-            height={300}
+            className="object-cover"
+            width={650}
+            height={480}
           />
         </div>
 
+        {/* Left Card */}
+        <div className="relative bg-[#f7f7f7] rounded-2xl p-[80px] w-[451px] h-[608px] z-10">
+          <h6 className="text-[#ee626b] uppercase font-bold text-[15px]">OUR SHOP</h6>
+          <h2 className="text-[36px] font-bold text-[#1e1e1e] mt-5">
+            Go Pre-Order <br />
+            Buy & Get <br />
+            Best <span className="text-[#0071f8]">Prices</span> <br />
+            For You!
+          </h2>
+          <p className="text-[#4a4a4a] font-semibold text-[16px] my-10">
+            Lorem ipsum dolor consectetur adipiscing, sed do eiusmod tempor incididunt.
+          </p>
+          <button className="h-12 text-[14px] font-semibold bg-[#ee626b] hover:bg-[#1B7FFA] uppercase px-7 rounded-[25px] cursor-pointer">
+            SHOP NOW
+          </button>
+        </div>
+
+        {/* Empty column (for spacing in grid) */}
+        {/* <div></div> */}
+
         {/* Right Card */}
-        <div className="bg-gray-100 rounded-2xl p-6 md:p-8 text-left">
-          <p className="text-red-500 font-semibold text-sm mb-2">NEWSLETTER</p>
-          <h2 className="text-[36px] font-bold text-[#1E1E1E] mb-4 leading-tight">
-            Get Up To $100 Off <span className="hidden md:inline"><br /></span>
-            Just Buy <span className="hidden md:inline"><br /></span>
-            <span className="text-[#006CEC]">Subscribe</span> <span className="hidden md:inline">
-              <br /></span>
+        <div className="relative bg-[#f7f7f7] rounded-2xl ml-[315px] p-[80px] w-[440px] mt-[120px] mr-[-15px] z-10">
+          <h6 className="text-[#ee626b] uppercase font-bold text-[15px]">
+            NEWSLETTER
+          </h6>
+
+          <h2 className="text-[36px] font-bold text-[#1e1e1e] mt-5 leading-tight">
+            Get Up To $100 Off <br />
+            Just Buy <br />
+            <span className="text-[#0071f8]">Subscribe</span> <br />
             Newsletter!
           </h2>
 
-          <p className="text-gray-600 text-sm">
-            Join now and receive exclusive offers delivered to your inbox.
-          </p>
+          <div className="flex items-center w-full mt-10">
+            <input
+              type="text"
+              placeholder="Your email..."
+              className="flex-1 px-4 h-12 rounded-l-full bg-white text-[14px] font-medium text-[#7a7a7a] outline-none"
+            />
+            <button className="bg-[#ee626b] px-2 h-12 rounded-r-full uppercase text-[14px] font-semibold text-white hover:bg-[#0071f8] transition">
+              Subscribe Now
+            </button>
+          </div>
         </div>
       </div>
     </section>

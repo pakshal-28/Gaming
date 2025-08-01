@@ -43,14 +43,15 @@ const games = [
 
 export default function Trending() {
   return (
-    <section className="max-w-7xl flex-col mx-auto px-4 py-30">
+    <section className="max-w-6xl flex-col mx-auto px-2 pt-50 pb-25">
       {/* Heading */}
       <div className="flex justify-between items-center mb-8">
         <div>
-          <p className="text-[#ee626b] uppercase text-[15px] font-bold">Trending</p>
-          <h2 className="text-[36px] font-bold text-[#1e1e1e] mt-1">Trending Games</h2>
+          <h6 className="text-[#ee626b] uppercase text-[15px] font-bold">Trending</h6>
+          <h2 className="text-[36px] font-bold text-[#1e1e1e] mt-5">Trending Games</h2>
         </div>
-        <button className="hidden md:inline-block text-[14px] font-bold bg-[#EE626B] hover:bg-[#1B7FFA] uppercase px-5 py-3 rounded-full cursor-pointer mt-4 md:mt-0">
+
+        <button className="hidden md:inline-block h-12 text-[14px] font-semibold bg-[#ee626b] hover:bg-[#1B7FFA] uppercase px-7 rounded-[25px] cursor-pointer">
           VIEW ALL
         </button>
       </div>
@@ -58,10 +59,11 @@ export default function Trending() {
       {/* Games Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {games.map((game) => (
-          <div key={game.id} className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+          <div key={game.id} className="bg-[#eeeeee] rounded-3xl mb-7 overflow-hidden transition">
             {/* Game Image */}
             <div className="relative">
-              <Image src={game.image} alt={game.title} width={300} height={180} className="w-full h-44 object-cover" />
+              <Image src={game.image} alt={game.title} width={261} height={191} 
+              className="rounded-[24px] object-cover" />
               {/* Price tags */}
               <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-2 rounded-lg text-right">
                 {game.oldPrice && (
@@ -73,12 +75,12 @@ export default function Trending() {
               </div>
             </div>
             {/* Game Info */}
-            <div className="p-4 flex justify-between items-center">
+            <div className="p-6 flex justify-between items-center">
               <div>
-                <p className="text-[14px] text-[#7a7a7a] ">{game.category}</p>
-                <h3 className="font-semibold text-[17px] text-[#1e1e1e]">{game.title}</h3>
+                <p className="text-[14px] text-[#7a7a7a] mb-1 ">{game.category}</p>
+                <h3 className="font-semibold text-[17px] text-[#1e1e1e] hover:text-[#1B7FFA]">{game.title}</h3>
               </div>
-              <div className="bg-red-100 text-red-500 rounded-full p-2">
+              <div className="bg-[#ee626b] text-white rounded-full p-2 hover:bg-[#1B7FFA]">
                 <FaLock size={20} />
               </div>
             </div>

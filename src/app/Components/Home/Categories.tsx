@@ -2,32 +2,32 @@ import Image from "next/image";
 
 export default function Categories() {
   const categories = [
-    { src: "/topgame1.jpg", title: "Action" },
-    { src: "/topgame2.jpg", title: "Action" },
-    { src: "/topgame3.jpg", title: "Action" },
-    { src: "/topgame1.jpg", title: "Action" },
-    { src: "/topgame2.jpg", title: "Action" },
+    { src: "/categories01.jpg", title: "Action" },
+    { src: "/Categories02.jpg", title: "Action" },
+    { src: "/categories03.jpg", title: "Action" },
+    { src: "/categories03.jpg", title: "Action" },
+    { src: "/Categories02.jpg", title: "Action" },
   ];
 
   return (
-    <section className="max-w-7xl flex-col mx-auto py-14 text-center">
+    <section className="max-w-6xl flex-col mx-auto py-14 text-center">
       {/* Header */}
       <div>
-        <p className="text-[#ee626b] uppercase text-[15px] font-bold">Categories</p>
-        <h2 className="text-[36px] font-bold text-[#1e1e1e] mt-1">Top Categories</h2>
+        <h6 className="text-[#ee626b] uppercase text-[15px] font-bold">Categories</h6>
+        <h2 className="text-[36px] font-bold text-[#1e1e1e] mt-5">Top Categories</h2>
       </div>
 
       {/* Category Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center py-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center py-7">
         {categories.map((cat, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md w-full max-w-[180px] overflow-hidden"
+            className="bg-white rounded-2xl shadow-md w-full max-w-[230px] overflow-hidden"
           >
             {/* Label */}
-            <div className="bg-blue-600 text-white text-sm font-semibold">
-              <h3 className="py-3">{cat.title}</h3>
-              <div className="relative w-full h-54 sm:h-36">
+            <div className="bg-[#0071f8] text-white text-sm font-semibold">
+              <h3 className="text-[17px] font-semibold text-white p-5">{cat.title}</h3>
+              <div className="relative w-full h-54 ">
                 <Image
                   src={cat.src}
                   alt={cat.title}
