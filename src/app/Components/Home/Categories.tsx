@@ -10,7 +10,7 @@ export default function Categories() {
   ];
 
   return (
-    <section className="max-w-6xl flex-col mx-auto py-14 text-center">
+    <section className="max-w-6xl flex-col mx-auto px-2 py-14 text-center">
       {/* Header */}
       <div>
         <h6 className="text-[#ee626b] uppercase text-[15px] font-bold">Categories</h6>

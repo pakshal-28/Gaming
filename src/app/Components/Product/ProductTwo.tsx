@@ -9,7 +9,7 @@ export default function ProductTwo() {
   const [quantity, setQuantity] = useState("1");
 
   return (
-    <section className="relative max-w-6xl mx-auto py-12 lg:py-20">
+    <section className="relative max-w-6xl mx-auto px-2 py-12 lg:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
         {/* Left Image Section */}
         <div className="flex items-center justify-center lg:justify-start">
@@ -52,7 +52,7 @@ export default function ProductTwo() {
 
             {/* Add to Cart Button */}
             <button
-              className="flex items-center justify-center space-x-2 w-full sm:w-auto bg-[#ee626b] hover:bg-[#0071f1] text-white px-6 py-3 rounded-full transition"
+              className="flex items-center justify-center space-x-2 w-full sm:w-auto bg-[#ee626b] hover:bg-[#0071f1] text-white px-6 py-3 rounded-full transition cursor-pointer"
             >
               <FaShoppingBag />
               <span className="text-[15px] uppercase font-medium">ADD TO CART</span>

@@ -6,8 +6,8 @@ export default function Newsletter() {
     <section className="relative max-w-6xl mx-auto py-16 bg-white">
       <div className="relative grid md:grid-cols-3 gap-6 items-center">
 
-        {/* Center Image - placed absolutely */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-95 w-[550px] rounded-2xl overflow-hidden z-0">
+        {/* Center Image - only visible below 768px */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-95 max-w-[550px] rounded-2xl overflow-hidden z-0 hidden md:block">
           <Image
             src={ctaimg}
             alt="Newsletter Banner"
@@ -18,7 +18,7 @@ export default function Newsletter() {
         </div>
 
         {/* Left Card */}
-        <div className="relative bg-[#f7f7f7] rounded-2xl p-[80px] w-[451px] h-[608px] z-10">
+        <div className="relative bg-[#f7f7f7] rounded-2xl p-[80px] w-full md:w-[451px] h-[608px] overflow-hidden z-10">
           <h6 className="text-[#ee626b] uppercase font-bold text-[15px]">OUR SHOP</h6>
           <h2 className="text-[36px] font-bold text-[#1e1e1e] mt-5">
             Go Pre-Order <br />
@@ -38,7 +38,7 @@ export default function Newsletter() {
         {/* <div></div> */}
 
         {/* Right Card */}
-        <div className="relative bg-[#f7f7f7] rounded-2xl ml-[315px] p-[80px] w-[440px] mt-[120px] mr-[-15px] z-10">
+        <div className="relative bg-[#f7f7f7] rounded-2xl lg:ml-[315px] p-[80px] w-full md:w-[440px] md:mt-[120px] mr-[-15px] z-10">
           <h6 className="text-[#ee626b] uppercase font-bold text-[15px]">
             NEWSLETTER
           </h6>
@@ -50,7 +50,7 @@ export default function Newsletter() {
             Newsletter!
           </h2>
 
-          <div className="flex items-center w-full mt-10">
+          <div className="flex items-center w-max-full mt-10">
             <input
               type="text"
               placeholder="Your email..."

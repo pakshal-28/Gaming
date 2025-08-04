@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <div className="flex items-center justify-between py-[80px]">
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 rounded-b-[25px] ${scrolled ? "bg-[#0071F8] shadow-md" : "bg-transparent"
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-2 rounded-b-[25px] ${scrolled ? "bg-[#0071F8] shadow-md" : "bg-transparent"
           }`}
       >
         <div className="max-w-6xl mx-auto flex items-center justify-between py-4">
@@ -36,7 +36,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-6">
+          <ul className="hidden md:flex items-center gap-4">
             {menuItems.map((item) => (
               <li key={item.name}>
                 <Link
@@ -73,8 +73,8 @@ export default function Navbar() {
                 <Link
                   href={item.path}
                   className={`block px-4 py-4 text-center transition ${pathname === item.path
-                      ? "bg-[#1B7FFA] text-white"
-                      : "hover:bg-[#EE626B] hover:text-white"
+                    ? "bg-[#1B7FFA] text-white"
+                    : "hover:bg-[#EE626B] hover:text-white"
                     }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -85,6 +85,6 @@ export default function Navbar() {
           </ul>
         </div>
       </nav>
-      </div>
-      );
+    </div>
+  );
 }

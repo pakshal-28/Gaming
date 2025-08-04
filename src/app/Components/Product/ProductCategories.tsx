@@ -9,7 +9,7 @@ export default function ProductCategories() {
         { src: "/Categories02.jpg", title: "Action" },
     ];
     return (
-        <section className="max-w-6xl mx-auto py-14">
+        <section className="max-w-6xl mx-auto px-2 py-14">
             {/* Header */}
             <div className="flex justify-between items-center mb-8">
                 <div>

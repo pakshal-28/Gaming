@@ -11,7 +11,7 @@ const features = [
 
 export default function SectionOne() {
   return (
-    <section className="relative max-w-6xl mx-auto text-white py-12 lg:py-14">
+    <section className="relative max-w-6xl mx-auto text-white px-2 py-12 lg:py-14">
       <div className="grid grid-cols-1 lg:grid-cols-2 md:items-center text-center lg:text-left gap-8">
         {/* Left Content */}
         <div className="flex flex-col items-center lg:items-start gap-6">

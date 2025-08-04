@@ -12,7 +12,7 @@ export default function Topgames() {
 
   return (
     <section className="px-2 py-4 bg-[#f7f7f7] rounded-[150px]">
-      <div className="max-w-6xl mx-auto py-20">
+      <div className="max-w-6xl mx-auto py-20 px-2">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
           <div>
@@ -35,10 +35,10 @@ export default function Topgames() {
             {games.map((game, index) => (
               <div
                 key={index}
-                className="bg-white rounded-[24px] flex flex-col relative hover:shadow-xl transition"
+                className="bg-white rounded-[24px] flex flex-col relative hover:shadow-xl transition my-2"
               >
                 {/* Image */}
-                <div className="relative w-full h-36 sm:h-40">
+                <div className="relative w-full h-36">
                   <Image
                     src={game.src}
                     alt={game.title}

@@ -38,7 +38,7 @@ export default function Shoptrading() {
     }
 
     return (
-        <section className="max-w-6xl flex-col mx-auto pt-40 pb-10">
+        <section className="max-w-6xl flex-col mx-auto px-2 pt-40 pb-10">
             {/* Filters */}
             <div className="flex justify-center items-center mb-10 py-5">
                 <ul className="flex gap-4 flex-wrap justify-center">
@@ -62,37 +62,42 @@ export default function Shoptrading() {
             {/* Games Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {filteredGames.map((game) => (
-                    <div key={game.id} className="bg-[#eeeeee] rounded-3xl mb-7 overflow-hidden transition">
-                        {/* Game Image */}
-                        <div className="relative">
-                            <Image
-                                src={game.image}
-                                alt={game.title}
-                                width={261}
-                                height={191}
-                                className="rounded-[24px] object-cover"
-                            />
-                            {/* Price tags */}
-                            <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-2 rounded-lg text-right">
-                                {game.oldPrice && (
-                                    <span className="block text-sm line-through text-gray-200">
+                    <div
+                                key={game.id}
+                                className="bg-[#eeeeee] rounded-3xl overflow-hidden transition hover:-translate-y-1 hover:shadow-lg"
+                              >
+                                {/* Game Image */}
+                                <div className="relative w-full h-[200px]">
+                                  <Image
+                                    src={game.image}
+                                    alt={game.title}
+                                    fill
+                                    className="rounded-t-3xl object-cover"
+                                  />
+                                  {/* Price tags */}
+                                  <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-2 rounded-lg text-right">
+                                    {game.oldPrice && (
+                                      <span className="block text-sm line-through text-gray-200">
                                         ${game.oldPrice}
-                                    </span>
-                                )}
-                                <span className="block text-lg font-bold">${game.price}</span>
-                            </div>
-                        </div>
-                        {/* Game Info */}
-                        <div className="p-6 flex justify-between items-center">
-                            <div>
-                                <p className="text-[14px] text-[#7a7a7a] mb-1 ">{game.category}</p>
-                                <h3 className="font-semibold text-[17px] text-[#1e1e1e] hover:text-[#1B7FFA]">{game.title}</h3>
-                            </div>
-                            <div className="bg-[#ee626b] text-white rounded-full p-2 hover:bg-[#1B7FFA]">
-                                <FaLock size={20} />
-                            </div>
-                        </div>
-                    </div>
+                                      </span>
+                                    )}
+                                    <span className="block text-lg font-bold">${game.price}</span>
+                                  </div>
+                                </div>
+                    
+                                {/* Game Info */}
+                                <div className="p-6 flex justify-between items-center">
+                                  <div>
+                                    <p className="text-[14px] text-[#7a7a7a] mb-1">{game.category}</p>
+                                    <h3 className="font-semibold text-[17px] text-[#1e1e1e] hover:text-[#1B7FFA]">
+                                      {game.title}
+                                    </h3>
+                                  </div>
+                                  <div className="bg-[#ee626b] text-white rounded-full p-2 hover:bg-[#1B7FFA] transition">
+                                    <FaLock size={18} />
+                                  </div>
+                                </div>
+                              </div>
                 ))}
             </div>
         </section>
