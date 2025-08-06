@@ -2,10 +2,18 @@ import NextBreadcrumb from '../Components/Common/NextBreadcrumb'
 import Navbar from "../Components/Common/Navbar";
 import ProductOne from "../Components/Product/ProductOne"
 import ProductTwo from "../Components/Product/ProductTwo"
-import ProductCategories from "../Components/Product/ProductCategories"
 import ProductReview from "../Components/Product/ProductReview"
+import ProductCategories from '../Components/Product/ProductCategories';
 import Footer from "../Components/Common/Footer";
 import { ChevronRight } from "lucide-react";
+
+const categories = [
+    { src: "/categories01.jpg", title: "Action" },
+    { src: "/Categories02.jpg", title: "Action" },
+    { src: "/categories03.jpg", title: "Action" },
+    { src: "/categories03.jpg", title: "Action" },
+    { src: "/Categories02.jpg", title: "Action" },
+];
 
 export default function ProductComponent() {
     return (
@@ -24,7 +32,7 @@ export default function ProductComponent() {
             </div>
             <ProductTwo />
             <ProductReview />
-            <ProductCategories />
+            <ProductCategories categories={categories} />
             <Footer />
         </div>
     );

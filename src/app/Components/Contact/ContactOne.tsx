@@ -2,6 +2,7 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
+
     <section className="relative max-w-6xl mx-auto text-white">
       <div className="flex flex-col items-center gap-6">
 

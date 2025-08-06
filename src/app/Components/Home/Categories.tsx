@@ -1,25 +1,18 @@
 import Image from "next/image";
 
-export default function Categories() {
-  const categories = [
-    { src: "/categories01.jpg", title: "Action" },
-    { src: "/Categories02.jpg", title: "Action" },
-    { src: "/categories03.jpg", title: "Action" },
-    { src: "/categories03.jpg", title: "Action" },
-    { src: "/Categories02.jpg", title: "Action" },
-  ];
+export default function Categories({categories = [],showHeader= false }:any) {
 
   return (
     <section className="max-w-6xl flex-col mx-auto px-2 py-14 text-center">
       {/* Header */}
-      <div>
+      {showHeader && <div>
         <h6 className="text-[#ee626b] uppercase text-[15px] font-bold">Categories</h6>
         <h2 className="text-[36px] font-bold text-[#1e1e1e] mt-5">Top Categories</h2>
-      </div>
+      </div>}
 
       {/* Category Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center py-7">
-        {categories.map((cat, index) => (
+        {categories.map((cat:any, index:number) => (
           <div
             key={index}
             className="bg-white rounded-2xl shadow-md w-full max-w-[230px] overflow-hidden"

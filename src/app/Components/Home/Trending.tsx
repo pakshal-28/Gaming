@@ -1,46 +1,7 @@
 import Image from "next/image";
 import { FaLock } from "react-icons/fa";
-import trending1 from "../../../../public/trending1.jpg";
-import trending2 from "../../../../public/trending2.jpg";
-import trending3 from "../../../../public/trending3.jpg";
-import trending4 from "../../../../public/trending4.jpg";
 
-const games = [
-  {
-    id: 1,
-    title: "Assassin Creed",
-    category: "Action",
-    image: trending1,
-    price: 20,
-    oldPrice: 28,
-  },
-  {
-    id: 2,
-    title: "Assassin Creed",
-    category: "Action",
-    image: trending2,
-    price: 44,
-    oldPrice: null,
-  },
-  {
-    id: 3,
-    title: "Assassin Creed",
-    category: "Action",
-    image: trending3,
-    price: 44,
-    oldPrice: 64,
-  },
-  {
-    id: 4,
-    title: "Assassin Creed",
-    category: "Action",
-    image: trending4,
-    price: 32,
-    oldPrice: null,
-  },
-];
-
-export default function Trending() {
+export default function Trending({games = []}:any) {
   return (
     <section className="max-w-6xl mx-auto px-2 pt-50 pb-25">
       {/* Heading */}
@@ -61,7 +22,7 @@ export default function Trending() {
 
       {/* Games Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {games.map((game) => (
+        {games.map((game:any) => (
           <div
             key={game.id}
             className="bg-[#eeeeee] rounded-3xl overflow-hidden transition hover:-translate-y-1 hover:shadow-lg"

@@ -1,8 +1,9 @@
 import NextBreadcrumb from '../Components/Common/NextBreadcrumb'
 import Navbar from "../Components/Common/Navbar";
 import ShopOne from "../Components/Shop/ShopOne"
-import Shoptrading from "../Components/Shop/Shoptrading"
+import Shoptrading from '../Components/Shop/Shoptrading';
 import Footer from "../Components/Common/Footer";
+
 import { ChevronRight } from "lucide-react";
 
 export default function ShopComponent() {
